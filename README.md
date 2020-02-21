@@ -37,6 +37,14 @@ res = tpr_rank.get_top_phrases(k=6)
 print(res)
 ```
 
+```python
+# Example of EmbedRank extraction
+path_to_sen2vecmodel = 's2v.bin'
+emb_rank = EmbedRank(k=5, embedModel = path_to_sen2vecmodel)
+emb_rank.load_text(test_str)
+res = emb_rank.topK_phrase()
+```
+
 Detailed examples are provided in the end of each methods python file
 
 
@@ -46,8 +54,7 @@ Currently implements the following keyphrase extraction models:
   * SingleRank  [[documentation](https://boudinfl.github.io/pke/build/html/unsupervised.html#singlerank), [article by (Wan and Xiao, 2008)](http://www.aclweb.org/anthology/C08-1122.pdf)]
   * Single Topical PageRank [[documentation](https://dl.acm.org/doi/abs/10.1145/2740908.2742730)]
 * Emdedding-based models
-  * Kea [[documentation](https://boudinfl.github.io/pke/build/html/supervised.html#kea), [article by (Witten et al., 2005)](https://www.cs.waikato.ac.nz/ml/publications/2005/chap_Witten-et-al_Windows.pdf)]
-  
+  * EmbedRank [[documentation](https://www.aclweb.org/anthology/K18-1022) ]
 
 
 
