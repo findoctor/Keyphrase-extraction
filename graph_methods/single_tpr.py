@@ -86,11 +86,12 @@ class singleTPR(singleRank):
             self.weights[phrase] = p_score 
 
 
-
+'''
 test_str = "Chunky beanie crafted in a super soft cashmere and wool quality. It has a double folded edge and is branded with an embroidered logo at front. \
     Ribbed wool and cashmere quality. Double folded edge. 57cm- Branded with JLJL logo. Unisex style. No. FMAC01250."
 tpr_rank = singleTPR(doc_index = 0, str_input=test_str)
 tpr_rank.weight_node()
 res = tpr_rank.get_top_phrases()
 print(res)
+'''
 
