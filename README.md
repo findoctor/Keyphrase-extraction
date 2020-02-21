@@ -22,11 +22,11 @@ To enable the use of Embedding-based method, follow innstructions [here](https:/
 to download Sent2vec model and store it in the 'EmbeddingRank' folder. Name it as 's2v.bin' for example. <br>
 
 Since I have already trained with LDA, I stored the word-to-topic distribution, document-to-topic distribution and feauture_names
-as pickle file inside LDA folder. Feel free to train with your own corpus and replace them with your trained distributions.
+as pickle file inside LDA folder. Feel free to train with your own corpus using lda.py and replace them with your trained distributions.
 
 
 ## Minimal example
-After install the whole repo
+After download the whole repo and named it as kkExtract:
 ```python
 # Example of single-tpr extraction
 import kkExtract
@@ -35,6 +35,7 @@ tpr_rank = singleTPR(doc_index = 12, input_file=path/to/your/txt_file) # build f
 tpr_rank.weight_node()
 res = tpr_rank.get_top_phrases(k=6)
 print(res)
+```
 
 Detailed examples are provided in the end of each methods python file
 
