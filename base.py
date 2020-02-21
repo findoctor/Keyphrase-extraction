@@ -61,11 +61,13 @@ class textBase(object):
         return utils.generate_candidate_phrase(self.raw_text)
     
     def get_top_phrases(self, k=6):
+        import operator
         """
         Rank self.weights variable and return top k in form of list of phrases
         """
-        sorted(self.weights.items(), key = lambda kv:(kv[1], kv[0]), reverse=True)
-        top_phrase = [ name for name, value in self.weights.items()]
+        self.weights = sorted(self.weights.items(), key=operator.itemgetter(1), reverse=True)
+        # sorted(self.weights.items(), key = lambda kv:(kv[1], kv[0]), reverse=True)
+        top_phrase = [ item[0] for item in self.weights]
         top_amount = min(len(top_phrase), k)
         return top_phrase[:top_amount]
 
