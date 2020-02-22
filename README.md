@@ -51,7 +51,7 @@ Detailed examples are provided in the end of each methods python file
 Currently implements the following keyphrase extraction models:
 
 * Graph-based models
-  * SingleRank  [[documentation](https://boudinfl.github.io/pke/build/html/unsupervised.html#singlerank), [article by (Wan and Xiao, 2008)](http://www.aclweb.org/anthology/C08-1122.pdf)]
+  * SingleRank  [[documentation](http://www.aclweb.org/anthology/C08-1122.pdf)]
   * Single Topical PageRank [[documentation](https://dl.acm.org/doi/abs/10.1145/2740908.2742730)]
 * Emdedding-based models
   * EmbedRank [[documentation](https://www.aclweb.org/anthology/K18-1022) ]
