@@ -24,10 +24,13 @@ def _MMR(k, word_embs, doc_emb, beta=0.5):
     ## Output: list of keyphrases
     '''
     selected = []
-    unselected = word_embs[:]  # make a copy, otherwise modify the  original word embeddings
+    unselected = word_embs[:]
+    
+    k = min(k, len(unselected))
+        
     while(len(selected) < k):
         max_sim = -1.0
-        if len(unselected) < 1:
+        if len(unselected) <= 1:
             break
         #added = unselected[0]
         added = None
@@ -45,8 +48,11 @@ def _MMR(k, word_embs, doc_emb, beta=0.5):
                 max_sim = cur_sim
                 added = (phrase, emb)
         # print("We add "+ str(added[0]) + " to the selected" )
-        selected.append(added)
-        unselected.remove(added)
+        if added:
+            selected.append(added)
+            
+        if added in unselected:
+            unselected.remove(added)
         #print(added[0])
         #print("k="+ str(len(selected)))
     return [_str for _str, emb in selected]
