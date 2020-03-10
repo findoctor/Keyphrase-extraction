@@ -57,4 +57,12 @@ Currently implements the following keyphrase extraction models:
   * EmbedRank [[documentation](https://www.aclweb.org/anthology/K18-1022) ]
 
 
+# Stackoverflow question recommendation
+Stackoverflow question recommendation built on top of the idea of keyphrase extraction.
+1. Use Django as the web framework.
+2. Scrape data from stackoverflow.com.
 
+Django and Scraping related code is not released in this repo.
+
+*Screenshot*
+![Image of Yaktocat](https://github.com/findoctor/Keyphrase-extraction/blob/master/stack_demo.jpg)
